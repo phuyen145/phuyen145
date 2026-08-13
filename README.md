@@ -3,13 +3,9 @@
 </div>
 
 ## 👩‍💻 About Me
-I'm a student passionate about Data Analytics and Machine Learning.
+I'm currently a Management Information Systems student at HCMC Open University (HCMCOU), with hands-on experience across the full analytics workflow - from EDA and feature engineering to machine learning modeling and business-ready dashboards. Proficient in Python, SQL, and Power BI. Seeking a fresher role where I can apply data-driven thinking to real business problems and contribute to a collaborative, impact-focused team.
 
-I enjoy turning raw data into meaningful insights through the complete analytical workflow — from data cleaning and exploratory analysis to visualization, modeling, and forecasting.
+🌐 https://phuyen145.github.io/
+📫 tranphuonguyen.contact@gmail.com
+🔗 https://www.linkedin.com/in/phuong-uyen-tran-a9b17a391/
 
-📊 Interested in Data Analytics & Business Intelligence 
-🔍 Enjoy exploring patterns and uncovering insights from data 
-🤖 Building practical experience with Machine Learning & Time Series Forecasting 
-📈 Experienced in creating analytical reports and dashboards 
-🌱 Currently improving my skills in SQL, Python, Power BI, Excel, and predictive analytics 
-🎯 Career goal: Data Analyst 
