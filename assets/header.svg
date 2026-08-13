@@ -150,6 +150,5 @@
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.57;0.60;0.78;0.82;1" dur="12s" repeatCount="indefinite"/>
   </g>
 
-
   <line x1="40" y1="298" x2="960" y2="298" stroke="#cbd5e1" stroke-width="4"/>
 </svg>
