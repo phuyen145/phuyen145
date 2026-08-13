@@ -2,7 +2,7 @@
   <img src="./assets/header.svg" width="100%" alt="Data Analyst Header"/>
 </div>
 
-👩‍💻 About Me
+##👩‍💻 About Me
 I'm a student passionate about Data Analytics and Machine Learning.
 
 I enjoy turning raw data into meaningful insights through the complete analytical workflow — from data cleaning and exploratory analysis to visualization, modeling, and forecasting.
