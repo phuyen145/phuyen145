@@ -1,74 +1,41 @@
-# Portfolio của Trần Thị Phương Uyên
+<div align="center">
 
-Trang portfolio tĩnh (HTML/CSS/JS thuần), toàn bộ nội dung được cấu hình qua `config.json`.
-Danh sách project được **tự động load từ GitHub** của bạn (`phuyen145`) — không cần cập nhật tay.
+<h1>
+  Hi 👋, I'm Tran Thi Phuong Uyen
+</h1>
 
-## Cấu trúc file
+<img
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=900&color=155E52&center=true&vCenter=true&width=650&lines=Data+Analyst;Python+%7C+SQL+%7C+Power+BI;Turning+Data+into+Insights+%F0%9F%93%8A;Always+Learning+Something+New+%E2%9C%A8"
+  alt="Typing SVG"
+/>
 
-```
-portfolio-site/
-├── index.html      # khung trang
-├── style.css       # giao diện
-├── script.js       # đọc config.json + gọi GitHub API
-├── config.json     # TOÀN BỘ nội dung bạn cần sửa nằm ở đây
-├── assets/
-│   └── avatar.jpg  # ảnh đại diện (bạn tự thêm vào)
-└── README.md
-```
+<br>
 
-## 1. Sửa nội dung (không cần biết code)
+<b>Data Analyst • Business Intelligence • Machine Learning</b>
 
-Mở `config.json`, chỉnh các trường:
+<br><br>
 
-- `name`, `role`, `location`, `status`, `bio`, `tagline`, `stack`
-- `links.github`, `links.linkedin`, `links.email`
-- `skills`: mảng các kỹ năng, mỗi item có `name`, `category`, `level` (0–100, quyết định độ dài thanh bar)
-- `maxProjects`: số project tối đa hiển thị (mặc định 6, lấy repo có nhiều sao nhất / mới cập nhật nhất)
-- Nếu muốn **tự chọn tay** project thay vì lấy tự động từ GitHub, điền vào `manualProjects`, ví dụ:
+<a href="https://phuyen145.github.io">
+  <img src="https://img.shields.io/badge/Portfolio-155E52?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>
 
-```json
-"manualProjects": [
-  {
-    "name": "Sales Dashboard",
-    "description": "Power BI dashboard phân tích doanh thu theo khu vực.",
-    "url": "https://github.com/phuyen145/sales-dashboard",
-    "language": "Power BI",
-    "stars": 0
-  }
-]
-```
+<a href="YOUR_LINKEDIN_URL">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
 
-## 2. Thêm ảnh đại diện
+<a href="mailto:YOUR_EMAIL">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
 
-Đặt ảnh của bạn vào `assets/avatar.jpg` (đúng tên file này, hoặc đổi đường dẫn trong `config.json` → `avatar`).
-Nếu chưa có ảnh, trang sẽ tự hiển thị chữ viết tắt tên bạn (PU) thay thế — không lỗi.
+</div>
 
-## 3. Đưa lên GitHub Pages (miễn phí)
+<br>
 
-1. Tạo repository mới trên GitHub, đặt tên **chính xác**: `phuyen145.github.io`
-   (phải trùng với username GitHub của bạn, đây là quy định bắt buộc của GitHub Pages)
-2. Upload toàn bộ các file trong thư mục này vào repo đó (kéo-thả trên GitHub web, hoặc dùng Git):
+---
 
-```bash
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
-git remote add origin https://github.com/phuyen145/phuyen145.github.io.git
-git push -u origin main
-```
+## 👩‍💻 About Me
 
-3. Vào repo → **Settings → Pages** → phần "Build and deployment" chọn **Source: Deploy from a branch**,
-   branch `main`, folder `/root` → Save.
-4. Đợi 1–2 phút, trang sẽ live tại: **https://phuyen145.github.io**
-
-## 4. Cập nhật sau này
-
-- Có project mới trên GitHub → tự động xuất hiện trên trang (không cần sửa gì, vì trang gọi GitHub API trực tiếp).
-- Đổi bio, skills, link liên hệ → chỉ cần sửa `config.json` rồi commit + push lại.
-
-## Ghi chú
-
-- Trang gọi `https://api.github.com/users/phuyen145/repos` mỗi khi có người truy cập — GitHub API cho phép
-  60 requests/giờ với khách chưa đăng nhập, đủ dùng cho portfolio cá nhân.
-- Repo bị fork sẽ tự bị lọc bỏ khỏi danh sách project.
+```sql
+SELECT *
+FROM analyst
+WHERE name = 'Tran Thi Phuong Uyen';
