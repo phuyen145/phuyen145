@@ -11,8 +11,6 @@
 
 <br>
 
-<b>Data Analyst • Business Intelligence • Machine Learning</b>
-
 <br><br>
 
 <a href="https://phuyen145.github.io">
