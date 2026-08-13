@@ -1,209 +1,160 @@
-<svg width="1000" height="320" viewBox="0 0 1000 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .title {
-      font: 700 34px 'Segoe UI', Arial, sans-serif;
-      fill: #0f172a;
-    }
-    .subtitle {
-      font: 700 30px 'Courier New', monospace;
-      fill: #0f766e;
-      letter-spacing: 1px;
-    }
-    .small {
-      font: 700 18px 'Courier New', monospace;
-      fill: #0f766e;
-    }
-    .num {
-      font: 700 22px 'Courier New', monospace;
-      fill: #0f766e;
-    }
-    .money {
-      font: 700 24px Arial, sans-serif;
-      fill: #16a34a;
-    }
-    .muted {
-      stroke: #0f172a;
-      stroke-width: 3;
-      fill: none;
-    }
-    .chart {
-      stroke: #0f766e;
-      stroke-width: 5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .dot {
-      fill: #0f766e;
-    }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; stroke: #1f2937; stroke-width: 2; }
+      .titlebox { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .title { font: 700 32px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .sub { font: 700 28px 'Courier New', monospace; fill: #0f766e; }
+      .mini { font: 700 18px 'Courier New', monospace; fill: #0f766e; }
+      .num { font: 700 22px 'Courier New', monospace; fill: #0f766e; }
+      .coin { font: 700 24px Arial, sans-serif; fill: #16a34a; }
+      .axis { stroke: #94a3b8; stroke-width: 3; }
+      .chart { stroke: #0f766e; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .dot { fill: #0f766e; }
+      .glass { stroke: #0f172a; stroke-width: 4; fill: none; }
+    </style>
+  </defs>
 
-  <!-- nền -->
-  <rect x="6" y="6" width="988" height="308" rx="14" fill="#F8FAFC" stroke="#0f172a" stroke-width="2"/>
+  <!-- background -->
+  <rect x="8" y="8" width="984" height="304" rx="14" class="bg"/>
 
-  <!-- khung title -->
-  <rect x="40" y="30" width="920" height="70" rx="8" fill="white" stroke="#0f172a" stroke-width="2"/>
+  <!-- title box -->
+  <rect x="40" y="32" width="920" height="64" rx="8" class="titlebox"/>
 
-  <!-- ================= TITLE GROUP ================= -->
-  <g id="titleGroup" opacity="1">
-    <text x="500" y="72" text-anchor="middle" class="title">
-      Hi 👋, I'm Tran Thi Phuong Uyen
+  <!-- title -->
+  <text x="500" y="73" text-anchor="middle" class="title">Hi 👋, I'm Tran Thi Phuong Uyen</text>
+
+  <!-- money rain only at first part -->
+  <g>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.23;0.27;1" dur="12s" repeatCount="indefinite"/>
+
+    <g>
+      <text x="150" y="18" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-8;0,88" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.7s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <text x="280" y="12" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-10;0,90" dur="1.9s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.9s" begin="0.2s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <text x="420" y="15" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-10;0,86" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <text x="610" y="10" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-10;0,92" dur="1.8s" begin="0.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.8s" begin="0.1s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <text x="760" y="14" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-12;0,90" dur="1.6s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" begin="0.5s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <text x="860" y="12" class="coin">$</text>
+      <animateTransform attributeName="transform" type="translate" values="0,-10;0,95" dur="1.85s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="1.85s" begin="0.3s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- scene 1: data analyst -->
+  <g opacity="0">
+    <text x="500" y="150" text-anchor="middle" class="sub">Data Analyst</text>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.08;0.28;0.32;1" dur="12s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- scene 2: magnifier + jumping numbers -->
+  <g opacity="0">
+    <text x="500" y="145" text-anchor="middle" class="mini">Searching insights...</text>
+
+    <g>
+      <circle cx="210" cy="140" r="18" class="glass"/>
+      <line x1="224" y1="154" x2="242" y2="172" class="glass" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;560,0" begin="4.0s" dur="2.2s" repeatCount="indefinite"/>
+    </g>
+
+    <text x="230" y="210" class="num">
+      124
+      <animate attributeName="opacity" values="0;1;0.4;1;0" begin="4.1s" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="210;195;210;190;210" begin="4.1s" dur="1.7s" repeatCount="indefinite"/>
     </text>
 
-    <!-- title group visible 0s -> 3.2s -->
-    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.26;0.30;0.92;1" dur="12s" repeatCount="indefinite"/>
+    <text x="350" y="225" class="num">
+      +52
+      <animate attributeName="opacity" values="0;1;0.5;1;0" begin="4.25s" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="225;210;225;206;225" begin="4.25s" dur="1.6s" repeatCount="indefinite"/>
+    </text>
 
-    <!-- money rain -->
-    <text x="150" y="20" class="money">$</text>
-    <animateTransform xlink:href="#money1" attributeName="transform" type="translate" values="0,-10; 0,85" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+    <text x="470" y="205" class="num">
+      87%
+      <animate attributeName="opacity" values="0;1;0.3;1;0" begin="4.0s" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="205;190;205;188;205" begin="4.0s" dur="1.9s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="600" y="225" class="num">
+      999
+      <animate attributeName="opacity" values="0;1;0.4;1;0" begin="4.2s" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="225;208;225;205;225" begin="4.2s" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="720" y="205" class="num">
+      3.14
+      <animate attributeName="opacity" values="0;1;0.4;1;0" begin="4.3s" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="205;190;205;188;205" begin="4.3s" dur="1.7s" repeatCount="indefinite"/>
+    </text>
+
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.31;0.34;0.54;0.58;1" dur="12s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Money items -->
-  <g id="moneyRain">
-    <g id="money1">
-      <text x="180" y="15" class="money">💸</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 0,90" dur="1.6s" begin="0s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" begin="0s" repeatCount="indefinite"/>
-    </g>
+  <!-- scene 3: growth chart -->
+  <g opacity="0">
+    <text x="500" y="145" text-anchor="middle" class="mini">Growth in progress...</text>
 
-    <g id="money2">
-      <text x="290" y="10" class="money">💵</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-15; 0,92" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
-    </g>
+    <line x1="250" y1="235" x2="760" y2="235" class="axis"/>
+    <line x1="250" y1="235" x2="250" y2="165" class="axis"/>
 
-    <g id="money3">
-      <text x="420" y="16" class="money">💸</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-12; 0,88" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
-    </g>
-
-    <g id="money4">
-      <text x="610" y="12" class="money">💵</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 0,94" dur="1.7s" begin="0.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.7s" begin="0.2s" repeatCount="indefinite"/>
-    </g>
-
-    <g id="money5">
-      <text x="760" y="14" class="money">💸</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-15; 0,90" dur="1.55s" begin="0.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.55s" begin="0.7s" repeatCount="indefinite"/>
-    </g>
-
-    <g id="money6">
-      <text x="860" y="10" class="money">💵</text>
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 0,96" dur="1.9s" begin="0.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="1.9s" begin="0.4s" repeatCount="indefinite"/>
-    </g>
-
-    <animate attributeName="opacity" values="1;1;0;0;0" keyTimes="0;0.25;0.28;0.99;1" dur="12s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- ================= DATA ANALYST 1 ================= -->
-  <g id="data1" opacity="0">
-    <text x="500" y="150" text-anchor="middle" class="subtitle">Data Analyst</text>
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.28;0.30;0.42;0.44;1" dur="12s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- ================= SEARCH + NUMBERS ================= -->
-  <g id="searchScene" opacity="0">
-    <text x="500" y="150" text-anchor="middle" class="small">Searching insights...</text>
-
-    <!-- numbers -->
-    <g>
-      <text x="250" y="205" class="num">1024</text>
-      <animate attributeName="opacity" values="0;1;0.4;1;0" dur="1.6s" begin="5.1s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="210;195;205;190;205" dur="1.6s" begin="5.1s" repeatCount="indefinite"/>
-    </g>
-
-    <g>
-      <text x="360" y="225" class="num">87%</text>
-      <animate attributeName="opacity" values="0;1;0.3;1;0" dur="1.8s" begin="5.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="225;212;220;208;225" dur="1.8s" begin="5.2s" repeatCount="indefinite"/>
-    </g>
-
-    <g>
-      <text x="470" y="205" class="num">+28</text>
-      <animate attributeName="opacity" values="0;1;0.5;1;0" dur="1.5s" begin="5.0s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="205;190;198;184;205" dur="1.5s" begin="5.0s" repeatCount="indefinite"/>
-    </g>
-
-    <g>
-      <text x="590" y="228" class="num">3.14</text>
-      <animate attributeName="opacity" values="0;1;0.4;1;0" dur="1.9s" begin="5.15s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="228;214;224;210;228" dur="1.9s" begin="5.15s" repeatCount="indefinite"/>
-    </g>
-
-    <g>
-      <text x="710" y="205" class="num">999</text>
-      <animate attributeName="opacity" values="0;1;0.4;1;0" dur="1.7s" begin="5.3s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="205;190;198;186;205" dur="1.7s" begin="5.3s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- kính lúp -->
-    <g id="glass">
-      <circle cx="210" cy="145" r="18" stroke="#0f172a" stroke-width="4" fill="none"/>
-      <line x1="224" y1="159" x2="242" y2="177" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 560,0" begin="5.0s" dur="2.4s" repeatCount="indefinite"/>
-    </g>
-
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44;0.46;0.64;0.66;1" dur="12s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- ================= CHART ================= -->
-  <g id="chartScene" opacity="0">
-    <text x="500" y="135" text-anchor="middle" class="small">Growth in progress...</text>
-
-    <!-- trục -->
-    <line x1="250" y1="235" x2="760" y2="235" class="muted" opacity="0.4"/>
-    <line x1="250" y1="235" x2="250" y2="160" class="muted" opacity="0.4"/>
-
-    <!-- line chart -->
-    <path id="growthLine" d="M270 220 L360 212 L450 195 L540 185 L630 150 L730 118" class="chart"
-      stroke-dasharray="600" stroke-dashoffset="600">
-      <animate attributeName="stroke-dashoffset" values="600;0;0" keyTimes="0;0.35;1" begin="8.0s" dur="2.2s" repeatCount="indefinite"/>
+    <path d="M270 220 L360 210 L450 194 L540 180 L635 150 L730 118"
+          class="chart"
+          stroke-dasharray="600"
+          stroke-dashoffset="600">
+      <animate attributeName="stroke-dashoffset" values="600;0;0" begin="7.0s" dur="1.9s" repeatCount="indefinite"/>
     </path>
 
-    <!-- dots -->
     <circle cx="270" cy="220" r="0" class="dot">
-      <animate attributeName="r" values="0;4;4" begin="8.0s" dur="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0;4;4" begin="7.0s" dur="0.3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="360" cy="212" r="0" class="dot">
-      <animate attributeName="r" values="0;0;4;4" begin="8.2s" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="360" cy="210" r="0" class="dot">
+      <animate attributeName="r" values="0;0;4;4" begin="7.2s" dur="0.35s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="450" cy="195" r="0" class="dot">
-      <animate attributeName="r" values="0;0;4;4" begin="8.4s" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="450" cy="194" r="0" class="dot">
+      <animate attributeName="r" values="0;0;4;4" begin="7.4s" dur="0.35s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="540" cy="185" r="0" class="dot">
-      <animate attributeName="r" values="0;0;4;4" begin="8.6s" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="540" cy="180" r="0" class="dot">
+      <animate attributeName="r" values="0;0;4;4" begin="7.6s" dur="0.35s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="630" cy="150" r="0" class="dot">
-      <animate attributeName="r" values="0;0;4;4" begin="8.8s" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="635" cy="150" r="0" class="dot">
+      <animate attributeName="r" values="0;0;4;4" begin="7.8s" dur="0.35s" repeatCount="indefinite"/>
     </circle>
     <circle cx="730" cy="118" r="0" class="dot">
-      <animate attributeName="r" values="0;0;5;5" begin="9.0s" dur="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0;0;5;5" begin="8.0s" dur="0.35s" repeatCount="indefinite"/>
     </circle>
 
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.66;0.68;0.84;0.86;1" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.57;0.60;0.78;0.82;1" dur="12s" repeatCount="indefinite"/>
   </g>
 
-  <!-- ================= DATA ANALYST 2 ================= -->
-  <g id="data2" opacity="0">
-    <text x="500" y="150" text-anchor="middle" class="subtitle">Data Analyst</text>
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.86;0.88;0.98;1" dur="12s" repeatCount="indefinite"/>
+  <!-- scene 4: final data analyst -->
+  <g opacity="0">
+    <text x="500" y="150" text-anchor="middle" class="sub">Data Analyst</text>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.81;0.84;0.98;1" dur="12s" repeatCount="indefinite"/>
   </g>
 
-  <!-- buttons giả -->
-  <g transform="translate(365 255)">
-    <rect x="0" y="0" width="120" height="36" rx="0" fill="#0f766e"/>
-    <text x="60" y="24" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="16" fill="white">PORTFOLIO</text>
-  </g>
-
-  <g transform="translate(500 255)">
-    <rect x="0" y="0" width="105" height="36" rx="0" fill="#2563eb"/>
-    <text x="52" y="24" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="16" fill="white">LINKEDIN</text>
-  </g>
-
-  <!-- line cuối -->
-  <line x1="40" y1="305" x2="960" y2="305" stroke="#cbd5e1" stroke-width="4"/>
+  <line x1="40" y1="298" x2="960" y2="298" stroke="#cbd5e1" stroke-width="4"/>
 </svg>
